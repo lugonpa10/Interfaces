@@ -1,0 +1,14 @@
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\bin\Debug\net8.0\Ejercicio7.exe
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\bin\Debug\net8.0\Ejercicio7.deps.json
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\bin\Debug\net8.0\Ejercicio7.runtimeconfig.json
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\bin\Debug\net8.0\Ejercicio7.dll
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\bin\Debug\net8.0\Ejercicio7.pdb
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.GeneratedMSBuildEditorConfig.editorconfig
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.AssemblyInfoInputs.cache
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.AssemblyInfo.cs
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.csproj.CoreCompileInputs.cache
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.dll
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\refint\Ejercicio7.dll
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.pdb
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\Ejercicio7.genruntimeconfig.cache
+D:\2ºDAM\Curro\Bol1\Ejercicio7\Ejercicio7\obj\Debug\net8.0\ref\Ejercicio7.dll

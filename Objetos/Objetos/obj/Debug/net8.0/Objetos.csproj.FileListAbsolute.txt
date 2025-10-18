@@ -1,0 +1,14 @@
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\bin\Debug\net8.0\Objetos.exe
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\bin\Debug\net8.0\Objetos.deps.json
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\bin\Debug\net8.0\Objetos.runtimeconfig.json
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\bin\Debug\net8.0\Objetos.dll
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\bin\Debug\net8.0\Objetos.pdb
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.GeneratedMSBuildEditorConfig.editorconfig
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.AssemblyInfoInputs.cache
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.AssemblyInfo.cs
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.csproj.CoreCompileInputs.cache
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.dll
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\refint\Objetos.dll
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.pdb
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\Objetos.genruntimeconfig.cache
+D:\2ºDAM\Curro\Bol1\Objetos\Objetos\obj\Debug\net8.0\ref\Objetos.dll

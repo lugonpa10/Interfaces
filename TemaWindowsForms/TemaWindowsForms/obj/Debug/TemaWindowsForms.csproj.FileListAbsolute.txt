@@ -1,0 +1,11 @@
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\bin\Debug\TemaWindowsForms.exe.config
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\bin\Debug\TemaWindowsForms.exe
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\bin\Debug\TemaWindowsForms.pdb
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.csproj.AssemblyReference.cache
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.Form1.resources
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.Properties.Resources.resources
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.csproj.GenerateResource.cache
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.csproj.CoreCompileInputs.cache
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.exe
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.pdb
+D:\2ºDAM\TemaWindowsForms\TemaWindowsForms\obj\Debug\TemaWindowsForms.exe.config

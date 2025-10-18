@@ -1,0 +1,11 @@
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe.config
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.pdb
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.AssemblyReference.cache
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.Form1.resources
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.Properties.Resources.resources
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.GenerateResource.cache
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.pdb
+D:\2ºDAM\Interfaces\Bol4\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe.config

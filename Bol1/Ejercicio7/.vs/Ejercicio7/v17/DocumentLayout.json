@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|d:\\2\u00BAdam\\curro\\bol1\\ejercicio7\\ejercicio7\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|solutionrelative:ejercicio7\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|d:\\2\u00BAdam\\curro\\bol1\\ejercicio7\\ejercicio7\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|solutionrelative:ejercicio7\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|d:\\2\u00BAdam\\curro\\bol1\\ejercicio7\\ejercicio7\\planeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|solutionrelative:ejercicio7\\planeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|d:\\2\u00BAdam\\curro\\bol1\\ejercicio7\\ejercicio7\\iterraformable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|solutionrelative:ejercicio7\\iterraformable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|d:\\2\u00BAdam\\curro\\bol1\\ejercicio7\\ejercicio7\\cometa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD59BCFE-A434-4698-9535-061C7FF3B499}|Ejercicio7\\Ejercicio7.csproj|solutionrelative:ejercicio7\\cometa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Astro.cs",
+              "DocumentMoniker": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Astro.cs",
+              "RelativeDocumentMoniker": "Ejercicio7\\Astro.cs",
+              "ToolTip": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Astro.cs",
+              "RelativeToolTip": "Ejercicio7\\Astro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:02:30.759Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cometa.cs",
+              "DocumentMoniker": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Cometa.cs",
+              "RelativeDocumentMoniker": "Ejercicio7\\Cometa.cs",
+              "ToolTip": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Cometa.cs",
+              "RelativeToolTip": "Ejercicio7\\Cometa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T19:52:31.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITerraformable.cs",
+              "DocumentMoniker": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\ITerraformable.cs",
+              "RelativeDocumentMoniker": "Ejercicio7\\ITerraformable.cs",
+              "ToolTip": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\ITerraformable.cs",
+              "RelativeToolTip": "Ejercicio7\\ITerraformable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:29:18.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Planeta.cs",
+              "DocumentMoniker": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Planeta.cs",
+              "RelativeDocumentMoniker": "Ejercicio7\\Planeta.cs",
+              "ToolTip": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Planeta.cs",
+              "RelativeToolTip": "Ejercicio7\\Planeta.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T17:31:22.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Principal.cs",
+              "RelativeDocumentMoniker": "Ejercicio7\\Principal.cs",
+              "ToolTip": "D:\\2\u00BADAM\\Curro\\Bol1\\Ejercicio7\\Ejercicio7\\Principal.cs",
+              "RelativeToolTip": "Ejercicio7\\Principal.cs",
+              "ViewState": "AgIAABYBAAAAAAAAAAAAwD0BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T10:56:50.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

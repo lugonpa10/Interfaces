@@ -1,0 +1,14 @@
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\bin\Debug\net8.0\TemaArchivos.exe
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\bin\Debug\net8.0\TemaArchivos.deps.json
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\bin\Debug\net8.0\TemaArchivos.runtimeconfig.json
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\bin\Debug\net8.0\TemaArchivos.dll
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\bin\Debug\net8.0\TemaArchivos.pdb
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.GeneratedMSBuildEditorConfig.editorconfig
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.AssemblyInfoInputs.cache
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.AssemblyInfo.cs
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.csproj.CoreCompileInputs.cache
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.dll
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\refint\TemaArchivos.dll
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.pdb
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\TemaArchivos.genruntimeconfig.cache
+D:\2ºDAM\Curro\Bol1\TemaArchivos\TemaArchivos\obj\Debug\net8.0\ref\TemaArchivos.dll

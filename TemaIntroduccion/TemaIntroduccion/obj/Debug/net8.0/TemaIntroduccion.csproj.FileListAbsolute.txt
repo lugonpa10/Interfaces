@@ -1,0 +1,14 @@
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\bin\Debug\net8.0\TemaIntroduccion.exe
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\bin\Debug\net8.0\TemaIntroduccion.deps.json
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\bin\Debug\net8.0\TemaIntroduccion.runtimeconfig.json
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\bin\Debug\net8.0\TemaIntroduccion.dll
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\bin\Debug\net8.0\TemaIntroduccion.pdb
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.AssemblyInfo.cs
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.dll
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\refint\TemaIntroduccion.dll
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.pdb
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\TemaIntroduccion.genruntimeconfig.cache
+C:\Users\lucas\source\repos\TemaIntroduccion\TemaIntroduccion\obj\Debug\net8.0\ref\TemaIntroduccion.dll

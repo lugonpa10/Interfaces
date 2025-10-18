@@ -1,0 +1,14 @@
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\bin\Debug\net8.0\Arrays.exe
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\bin\Debug\net8.0\Arrays.deps.json
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\bin\Debug\net8.0\Arrays.runtimeconfig.json
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\bin\Debug\net8.0\Arrays.dll
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\bin\Debug\net8.0\Arrays.pdb
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.dll
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.pdb
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\Arrays.genruntimeconfig.cache
+D:\2ºDAM\Curro\Bol1\Arrays\Arrays\obj\Debug\net8.0\ref\Arrays.dll
