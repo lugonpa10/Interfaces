@@ -15,11 +15,15 @@ namespace Ejercicio1
         public Form1()
         {
             InitializeComponent();
+
+
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Text = "Mouse Tester";
+            this.KeyPreview = true;
             button1.BackColor = Color.White;
             button2.BackColor = Color.White;
 
@@ -40,12 +44,13 @@ namespace Ejercicio1
                     x += 100;
                 }
                 button = new Button();
-                button.Text = " " + (i + 1);
+                button.Text = (i + 1).ToString();
                 button.Location = new Point(x, y);
 
                 this.Controls.Add(button);
                 button.MouseMove += Form1_MouseMove;
-                button.MouseDown += Form1_MouseDown;
+                button.MouseUp += Form1_MouseUp;
+
 
 
 
@@ -61,7 +66,7 @@ namespace Ejercicio1
 
 
             this.Text = e.Location.ToString();
-            this.Text = $"X: {MousePosition.X}, Y: {MousePosition.Y}";
+
 
 
 
@@ -78,10 +83,14 @@ namespace Ejercicio1
         {
             if (e.KeyCode == Keys.Escape)
             {
-                this.Text = "Mouse Tester";
+                this.Text = "Mouse tester";
 
             }
-            this.Text = e.KeyCode.ToString();
+            else
+            {
+                this.Text = e.KeyCode.ToString();
+
+            }
 
         }
 
@@ -105,20 +114,39 @@ namespace Ejercicio1
             }
             else if (MouseButtons == MouseButtons.Left)
             {
-                button1.BackColor = Color.Blue;
+                button1.BackColor = Color.Green;
             }
             else
             {
                 button1.BackColor = Color.Blue;
-                button2.BackColor = Color.Red;
+                button2.BackColor = Color.Blue;
 
             }
+
+
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+
+            if (MouseButtons == MouseButtons.Right)
+            {
+                button2.BackColor = Color.Red;
+            }
+            else if (MouseButtons == MouseButtons.Left)
+            {
+                button1.BackColor = Color.Green;
+            }
+            else
+            {
+
             button1.BackColor = Color.White;
+
             button2.BackColor = Color.White;
+            }
+
+            
+
 
 
         }
