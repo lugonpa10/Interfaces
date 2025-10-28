@@ -50,6 +50,7 @@ namespace Ejercicio1
                 this.Controls.Add(button);
                 button.MouseMove += Form1_MouseMove;
                 button.MouseUp += Form1_MouseUp;
+                button.MouseDown += Form1_MouseDown;
 
 
 
@@ -123,6 +124,11 @@ namespace Ejercicio1
 
             }
 
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                btn.ForeColor = Color.Red;
+            }
 
         }
 
@@ -140,12 +146,16 @@ namespace Ejercicio1
             else
             {
 
-            button1.BackColor = Color.White;
+                button1.BackColor = Color.White;
 
-            button2.BackColor = Color.White;
+                button2.BackColor = Color.White;
             }
 
-            
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                btn.ForeColor = Color.Black; 
+            }
 
 
 
