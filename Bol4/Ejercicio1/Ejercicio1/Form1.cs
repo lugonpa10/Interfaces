@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejercicio1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form//Icono.Coor en botones.revisar colores botones.
     {
         public Form1()
         {
@@ -124,11 +124,11 @@ namespace Ejercicio1
 
             }
 
-            Button btn = sender as Button;
-            if (btn != null)
-            {
-                btn.ForeColor = Color.Red;
-            }
+            //Button btn = sender as Button;
+            //if (btn != null)
+            //{
+            //    btn.ForeColor = Color.Red;
+            //}
 
         }
 
@@ -142,20 +142,20 @@ namespace Ejercicio1
             else if (MouseButtons == MouseButtons.Left)
             {
                 button1.BackColor = Color.Green;
-            }
-            else
-            {
 
                 button1.BackColor = Color.White;
 
                 button2.BackColor = Color.White;
             }
-
-            Button btn = sender as Button;
-            if (btn != null)
+            else
             {
-                btn.ForeColor = Color.Black; 
             }
+
+            //Button btn = sender as Button;
+            //if (btn != null)
+            //{
+            //    btn.ForeColor = Color.Black; 
+            //}
 
 
 
