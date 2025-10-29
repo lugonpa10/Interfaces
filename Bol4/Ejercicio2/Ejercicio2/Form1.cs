@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace Ejercicio2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            this.Cursor = new Cursor("C:\\Users\\lucas\\Downloads\\wii-help.cur");
 
         }
 
@@ -117,6 +119,7 @@ namespace Ejercicio2
 
 
 
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -126,6 +129,19 @@ namespace Ejercicio2
 
         private void btnImagen_Click(object sender, EventArgs e)
         {
+            try
+            {
+               
+                string ruta = textBox4.Text;
+                pictureBox1.Image = Image.FromFile(ruta);
+
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("No se ha encontrado la imagen", "Error imagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
 
         }
 

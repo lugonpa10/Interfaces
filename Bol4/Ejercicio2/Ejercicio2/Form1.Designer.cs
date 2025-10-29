@@ -98,7 +98,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(420, 245);
+            this.textBox4.Location = new System.Drawing.Point(449, 361);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(246, 20);
             this.textBox4.TabIndex = 6;
@@ -106,16 +106,17 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(420, 100);
+            this.pictureBox1.Location = new System.Drawing.Point(339, 126);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(461, 229);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnImagen
             // 
-            this.btnImagen.Location = new System.Drawing.Point(505, 271);
+            this.btnImagen.Location = new System.Drawing.Point(524, 387);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(75, 23);
             this.btnImagen.TabIndex = 8;
