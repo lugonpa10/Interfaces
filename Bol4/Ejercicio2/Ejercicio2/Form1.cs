@@ -21,7 +21,6 @@ namespace Ejercicio2
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            this.Cursor = new Cursor("C:\\Users\\lucas\\Downloads\\wii-help.cur");
 
         }
 
@@ -66,38 +65,12 @@ namespace Ejercicio2
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            int color2;
-            bool flag = int.TryParse(textBox2.Text, out color2);
-            if (flag)
-            {
-                if (color2 >= 0 && color2 <= 255)
-                {
 
-                }
-                else
-                {
-                    MessageBox.Show("El valor debe estar entre 0 y 255", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            int color3;
-            bool flag = int.TryParse(textBox3.Text, out color3);
-            if (flag)
-            {
-                if (color3 >= 0 && color3 <= 255)
-                {
 
-                }
-                else
-                {
-                    MessageBox.Show("El valor debe estar entre 0 y 255", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
         }
         private void btnColor_Click(object sender, EventArgs e)
         {
