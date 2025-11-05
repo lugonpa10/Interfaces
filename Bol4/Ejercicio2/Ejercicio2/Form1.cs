@@ -41,22 +41,36 @@ namespace Ejercicio2
 
         }
 
+        private bool ValidarColor(out byte r,out byte g,out byte b)
+        {
+            bool flag = true;
+            if (!byte.TryParse(textBox1.Text, out r))
+            {
+                flag = false;
+
+            }
+            if (!byte.TryParse(textBox2.Text, out g))
+            {
+                flag = false;
+            }
+            if (!byte.TryParse(textBox3.Text, out b))
+            {
+                flag = false;
+            }
+
+            if (!flag)
+            {
+                MessageBox.Show("Error entrada de valores","Error Colores",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return flag;
+
+
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            int color1;
-            bool flag = int.TryParse(textBox1.Text, out color1);
-            if (flag)
-            {
-                if (color1 >= 0 && color1 <= 255)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("El valor debe estar entre 0 y 255", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
+           
 
 
         }
@@ -74,16 +88,14 @@ namespace Ejercicio2
         }
         private void btnColor_Click(object sender, EventArgs e)
         {
-            int color1;
-            int color2;
-            int color3;
-            bool flag = int.TryParse(textBox1.Text, out color1);
-            bool flag2 = int.TryParse(textBox2.Text, out color2);
-            bool flag3 = int.TryParse(textBox3.Text, out color3);
+            if (ValidarColor(out byte r, out byte g,out byte b))
+            {
+                
+            this.BackColor = Color.FromArgb(r, g, b);
 
-            this.BackColor = Color.FromArgb(color1, color2, color3);
+            Color.FromArgb(r, g, b);
+            }
 
-            Color.FromArgb(color1, color2, color3);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
