@@ -20,6 +20,14 @@ namespace Ejercicio2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox1.Tag = 0;
+            textBox2.Tag = 0;
+            textBox3.Tag = 0;
+            textImg.Tag = "";
+
+           
+
+
 
 
         }
@@ -41,7 +49,7 @@ namespace Ejercicio2
 
         }
 
-        private bool ValidarColor(out byte r,out byte g,out byte b)
+        private bool ValidarColor(out byte r, out byte g, out byte b)
         {
             bool flag = true;
             if (!byte.TryParse(textBox1.Text, out r))
@@ -60,7 +68,7 @@ namespace Ejercicio2
 
             if (!flag)
             {
-                MessageBox.Show("Error entrada de valores","Error Colores",
+                MessageBox.Show("Error entrada de valores", "Error Colores",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return flag;
@@ -70,7 +78,7 @@ namespace Ejercicio2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
 
 
         }
@@ -88,12 +96,12 @@ namespace Ejercicio2
         }
         private void btnColor_Click(object sender, EventArgs e)
         {
-            if (ValidarColor(out byte r, out byte g,out byte b))
+            if (ValidarColor(out byte r, out byte g, out byte b))
             {
-                
-            this.BackColor = Color.FromArgb(r, g, b);
 
-            Color.FromArgb(r, g, b);
+                this.BackColor = Color.FromArgb(r, g, b);
+
+                Color.FromArgb(r, g, b);
             }
 
         }
@@ -101,6 +109,25 @@ namespace Ejercicio2
         private void btnReset_Click(object sender, EventArgs e)
         {
 
+            foreach (Control c in this.Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    if (c.Tag == null)
+                    {
+                        c.Text = "";
+                    }
+                    else
+                    {
+                        c.Text = c.Tag.ToString();
+                    }
+
+                }
+            }
+
+
+
+            this.BackColor = Color.Empty;
 
 
 
@@ -116,8 +143,8 @@ namespace Ejercicio2
         {
             try
             {
-               
-                string ruta = textBox4.Text;
+
+                string ruta = textImg.Text;
                 pictureBox1.Image = Image.FromFile(ruta);
 
             }
@@ -126,13 +153,48 @@ namespace Ejercicio2
                 MessageBox.Show("No se ha encontrado la imagen", "Error imagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            
+
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void btnSalir_MouseEnter(object sender, EventArgs e)
         {
+            btnSalir.BackColor = Color.Red;
+        }
 
+        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        {
+            btnSalir.BackColor = Color.Empty;
+        }
+
+        private void btnReset_MouseEnter(object sender, EventArgs e)
+        {
+            btnReset.BackColor = Color.Red;
+        }
+
+        private void btnReset_MouseLeave(object sender, EventArgs e)
+        {
+            btnReset.BackColor = Color.Empty;
+        }
+
+        private void btnColor_MouseEnter(object sender, EventArgs e)
+        {
+            btnColor.BackColor = Color.Red;
+        }
+
+        private void btnColor_MouseLeave(object sender, EventArgs e)
+        {
+            btnColor.BackColor = Color.Empty;
+        }
+
+        private void btnImagen_MouseEnter(object sender, EventArgs e)
+        {
+            btnImagen.BackColor = Color.Red;
+        }
+
+        private void btnImagen_MouseLeave(object sender, EventArgs e)
+        {
+            btnImagen.BackColor = Color.Empty;
         }
     }
 }

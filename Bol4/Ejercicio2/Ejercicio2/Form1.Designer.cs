@@ -35,7 +35,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textImg = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +51,8 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseEnter += new System.EventHandler(this.btnSalir_MouseEnter);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             // 
             // btnColor
             // 
@@ -62,6 +64,8 @@
             this.btnColor.Text = "Color";
             this.btnColor.UseVisualStyleBackColor = true;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
+            this.btnColor.MouseEnter += new System.EventHandler(this.btnColor_MouseEnter);
+            this.btnColor.MouseLeave += new System.EventHandler(this.btnColor_MouseLeave);
             // 
             // textBox1
             // 
@@ -96,14 +100,15 @@
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.MouseEnter += new System.EventHandler(this.btnReset_MouseEnter);
+            this.btnReset.MouseLeave += new System.EventHandler(this.btnReset_MouseLeave);
             // 
-            // textBox4
+            // textImg
             // 
-            this.textBox4.Location = new System.Drawing.Point(449, 361);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(246, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textImg.Location = new System.Drawing.Point(449, 361);
+            this.textImg.Name = "textImg";
+            this.textImg.Size = new System.Drawing.Size(246, 20);
+            this.textImg.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -124,6 +129,8 @@
             this.btnImagen.Text = "Imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
+            this.btnImagen.MouseEnter += new System.EventHandler(this.btnImagen_MouseEnter);
+            this.btnImagen.MouseLeave += new System.EventHandler(this.btnImagen_MouseLeave);
             // 
             // Form1
             // 
@@ -135,7 +142,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textImg);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -168,7 +175,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textImg;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnImagen;
     }
