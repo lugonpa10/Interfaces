@@ -125,7 +125,7 @@ namespace Ejercicio2
                 }
             }
 
-
+            this.pictureBox1.Image = null;
 
             this.BackColor = Color.Empty;
 
