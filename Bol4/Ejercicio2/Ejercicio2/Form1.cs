@@ -20,12 +20,26 @@ namespace Ejercicio2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = "Formulario Ejercicio 2";
             textBox1.Tag = 0;
             textBox2.Tag = 0;
             textBox3.Tag = 0;
             textImg.Tag = "";
 
-           
+            textBox1.Enter += Control_Enter;
+            textBox2.Enter += Control_Enter;
+            textBox3.Enter += Control_Enter;
+            textImg.Enter += Control_Enter;
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.MouseEnter += Botones_MouseEnter;
+                    c.MouseLeave += Botones_MouseLeave;
+                }
+            }
+
 
 
 
@@ -88,10 +102,12 @@ namespace Ejercicio2
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+
 
         }
         private void btnColor_Click(object sender, EventArgs e)
@@ -157,44 +173,42 @@ namespace Ejercicio2
 
         }
 
-        private void btnSalir_MouseEnter(object sender, EventArgs e)
+        private void textImg_TextChanged(object sender, EventArgs e)
         {
-            btnSalir.BackColor = Color.Red;
+
         }
 
-        private void btnSalir_MouseLeave(object sender, EventArgs e)
+        private void Control_Enter(object sender, EventArgs e)
         {
-            btnSalir.BackColor = Color.Empty;
+            if (sender == textBox1 || sender == textBox2 || sender == textBox3)
+            {
+                this.AcceptButton = btnColor;
+            }
+            if (sender == textImg)
+            {
+                this.AcceptButton = btnImagen;
+            }
+
         }
 
-        private void btnReset_MouseEnter(object sender, EventArgs e)
+        private void Botones_MouseEnter(object sender, EventArgs e)
         {
-            btnReset.BackColor = Color.Red;
+
+
+            Button btn = (Button)sender;
+            btn.BackColor = Color.Red;
+
+
+
+        }
+        private void Botones_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackColor = Color.Empty;
+
         }
 
-        private void btnReset_MouseLeave(object sender, EventArgs e)
-        {
-            btnReset.BackColor = Color.Empty;
-        }
 
-        private void btnColor_MouseEnter(object sender, EventArgs e)
-        {
-            btnColor.BackColor = Color.Red;
-        }
 
-        private void btnColor_MouseLeave(object sender, EventArgs e)
-        {
-            btnColor.BackColor = Color.Empty;
-        }
-
-        private void btnImagen_MouseEnter(object sender, EventArgs e)
-        {
-            btnImagen.BackColor = Color.Red;
-        }
-
-        private void btnImagen_MouseLeave(object sender, EventArgs e)
-        {
-            btnImagen.BackColor = Color.Empty;
-        }
     }
 }
