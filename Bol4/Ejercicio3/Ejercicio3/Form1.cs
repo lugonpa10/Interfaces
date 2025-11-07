@@ -20,13 +20,14 @@ namespace Ejercicio3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnNuevaImg_Click(object sender, EventArgs e)
         {
-            string contenidoArchivo ="";
+           
             string rutaArchivo = "";
+            string nombreArchivo = "";
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
                 ofd.Title = "Escoge una imagen";
@@ -36,21 +37,26 @@ namespace Ejercicio3
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    rutaArchivo=ofd.FileName;
-
-                    var fileStream = ofd.OpenFile();
-
-                    using (StreamReader sr = new StreamReader(fileStream))
-                    {
-                        contenidoArchivo=sr.ReadToEnd();
-                    }
+                    rutaArchivo = ofd.FileName;
+                    nombreArchivo= Path.GetFileName(ofd.FileName);
                     
+;                   
+                    Form2 f2 = new Form2(rutaArchivo);
+                    f2.Text = nombreArchivo;
+
+                    f2.Show();
                 }
 
             }
-            MessageBox.Show(contenidoArchivo, "File Content at path: " + rutaArchivo, MessageBoxButtons.OK);
         }
 
-        
+        private void checkModal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkModal.Checked == true)
+            {
+
+
+            }
+        }
     }
 }

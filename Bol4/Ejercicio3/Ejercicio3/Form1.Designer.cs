@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnNuevaImg = new System.Windows.Forms.Button();
             this.checkModal = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -52,6 +53,7 @@
             this.checkModal.TabIndex = 1;
             this.checkModal.Text = "Modal\r\n";
             this.checkModal.UseVisualStyleBackColor = true;
+            this.checkModal.CheckedChanged += new System.EventHandler(this.checkModal_CheckedChanged);
             // 
             // openFileDialog1
             // 
@@ -64,6 +66,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkModal);
             this.Controls.Add(this.btnNuevaImg);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
