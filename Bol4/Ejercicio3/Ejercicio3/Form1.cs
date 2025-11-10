@@ -25,7 +25,7 @@ namespace Ejercicio3
 
         private void btnNuevaImg_Click(object sender, EventArgs e)
         {
-           
+
             string rutaArchivo = "";
             string nombreArchivo = "";
             using (OpenFileDialog ofd = new OpenFileDialog())
@@ -38,23 +38,54 @@ namespace Ejercicio3
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     rutaArchivo = ofd.FileName;
-                    nombreArchivo= Path.GetFileName(ofd.FileName);
-                    
-;                   
+                    nombreArchivo = Path.GetFileName(ofd.FileName);
+
+
+                }
+
+                try
+                {
                     Form2 f2 = new Form2(rutaArchivo);
                     f2.Text = nombreArchivo;
 
-                    f2.Show();
+                    if (checkModal.Checked)
+                    {
+                        f2.ShowDialog();
+                    }
+                    else
+                    {
+                        f2.Show();
+                    }
+
                 }
+                catch (ArgumentException)
+                {
+                    MessageBox.Show("Error en la escritura de la imagen",
+                        "Error Imagen",
+                        MessageBoxButtons.OK, 
+                        MessageBoxIcon.Error);
+                }
+
+
+
+
+
 
             }
         }
 
         private void checkModal_CheckedChanged(object sender, EventArgs e)
         {
+            CheckBox check = (CheckBox)sender;
             if (checkModal.Checked == true)
             {
+                checkModal.ForeColor = Color.Red;
 
+
+            }
+            else
+            {
+                checkModal.ForeColor = Color.Black;
 
             }
         }
