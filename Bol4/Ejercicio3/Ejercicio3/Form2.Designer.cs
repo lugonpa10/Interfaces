@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deformarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deformarImagenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.noDeformacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -42,6 +49,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deformarImagenToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(115, 26);
+            // 
+            // deformarImagenToolStripMenuItem
+            // 
+            this.deformarImagenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deformarImagenToolStripMenuItem1,
+            this.noDeformacionToolStripMenuItem});
+            this.deformarImagenToolStripMenuItem.Name = "deformarImagenToolStripMenuItem";
+            this.deformarImagenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deformarImagenToolStripMenuItem.Text = "Imagen";
+            // 
+            // deformarImagenToolStripMenuItem1
+            // 
+            this.deformarImagenToolStripMenuItem1.Name = "deformarImagenToolStripMenuItem1";
+            this.deformarImagenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.deformarImagenToolStripMenuItem1.Text = "Ajuste Perfecto";
+            this.deformarImagenToolStripMenuItem1.Click += new System.EventHandler(this.deformarImagenToolStripMenuItem1_Click);
+            // 
+            // noDeformacionToolStripMenuItem
+            // 
+            this.noDeformacionToolStripMenuItem.Name = "noDeformacionToolStripMenuItem";
+            this.noDeformacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noDeformacionToolStripMenuItem.Text = "No deformacion";
+            this.noDeformacionToolStripMenuItem.Click += new System.EventHandler(this.noDeformacionToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -53,6 +90,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -60,5 +98,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deformarImagenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deformarImagenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem noDeformacionToolStripMenuItem;
     }
 }

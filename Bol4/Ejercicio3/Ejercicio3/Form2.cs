@@ -17,6 +17,7 @@ namespace Ejercicio3
             InitializeComponent();
 
             this.pictureBox1.Image = Image.FromFile(rutaArchivo);
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -26,6 +27,20 @@ namespace Ejercicio3
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+      
+
+        private void deformarImagenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+          pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+        }
+
+        private void noDeformacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode=PictureBoxSizeMode.Zoom;
         }
     }
 }

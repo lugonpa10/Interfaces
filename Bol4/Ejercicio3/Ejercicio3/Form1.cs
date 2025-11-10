@@ -62,7 +62,14 @@ namespace Ejercicio3
                 {
                     MessageBox.Show("Error en la escritura de la imagen",
                         "Error Imagen",
-                        MessageBoxButtons.OK, 
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                catch (IOException)
+                {
+                    MessageBox.Show("Error con el archivo",
+                        "Error Archivo",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
 
@@ -88,6 +95,24 @@ namespace Ejercicio3
                 checkModal.ForeColor = Color.Black;
 
             }
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            int seg = 0;
+            int min = 0;
+
+            if (seg < 60)
+            {
+                seg++;
+            
+               
+            }
+            this.Text = $"Visor de Imagenes {min}:{seg}";
+
+
         }
     }
 }
