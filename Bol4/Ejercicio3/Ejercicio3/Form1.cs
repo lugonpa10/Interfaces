@@ -13,6 +13,8 @@ namespace Ejercicio3
 {
     public partial class Form1 : Form
     {
+        int seg = 0;
+        int min = 0;
         public Form1()
         {
             InitializeComponent();
@@ -101,16 +103,20 @@ namespace Ejercicio3
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            int seg = 0;
-            int min = 0;
 
-            if (seg < 60)
+            seg++;
+            if (seg >= 60)
             {
-                seg++;
-            
-               
+                seg = 0;
+                min++;
+
             }
-            this.Text = $"Visor de Imagenes {min}:{seg}";
+
+            this.Text = $"Visor de imagenes {min:D2}:{seg:D2}";
+
+
+
+
 
 
         }
