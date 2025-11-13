@@ -49,9 +49,7 @@ namespace Ejercicio1
 
                 this.Controls.Add(button);
                 button.MouseMove += Form1_MouseMove;
-                button.MouseUp += Form1_MouseUp;
-                button.MouseDown += Form1_MouseDown;
-
+               
 
 
 
@@ -109,11 +107,11 @@ namespace Ejercicio1
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (MouseButtons == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right)
             {
                 button2.BackColor = Color.Red;
             }
-            else if (MouseButtons == MouseButtons.Left)
+            else if (e.Button == MouseButtons.Left)
             {
                 button1.BackColor = Color.Green;
             }
@@ -124,39 +122,29 @@ namespace Ejercicio1
 
             }
 
-            //Button btn = sender as Button;
-            //if (btn != null)
-            //{
-            //    btn.ForeColor = Color.Red;
-            //}
 
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
 
-            if (MouseButtons == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right)
             {
-                button2.BackColor = Color.Red;
+                button2.BackColor = Color.Empty;
             }
-            else if (MouseButtons == MouseButtons.Left)
+            else if (e.Button == MouseButtons.Left)
             {
-                button1.BackColor = Color.Green;
+                button1.BackColor = Color.Empty;
 
-                button1.BackColor = Color.White;
-
-                button2.BackColor = Color.White;
             }
             else
             {
+                button1.BackColor = Color.Empty;
+
+                button2.BackColor = Color.Empty;
             }
 
-            //Button btn = sender as Button;
-            //if (btn != null)
-            //{
-            //    btn.ForeColor = Color.Black; 
-            //}
-
+            
 
 
         }
