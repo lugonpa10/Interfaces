@@ -20,6 +20,8 @@ namespace Ejercicio4
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            lblSeleccionados.Click += texto_LblElementos;
+
         }
         private void BtnAñadir_Click(object sender, EventArgs e)
         {
@@ -83,7 +85,7 @@ namespace Ejercicio4
                 BtnEliminar.Text = "Eliminar de 1";
 
             }
-          
+
 
 
         }
@@ -95,15 +97,23 @@ namespace Ejercicio4
                 BtnEliminar.Text = "Eliminar de 2";
 
             }
-          
+
         }
 
         private void BtnTraspasar_Click(object sender, EventArgs e)
         {
             if (radioButton3.Checked)
             {
-                var hola = listBox1.SelectedItems[0];
-                listBox2.Items.Add(hola);
+                for (int i = 0; i < listBox1.SelectedItems.Count; i++)
+                {
+                    listBox2.Items.Add(listBox1.SelectedItems[i]);
+                }
+                for (int j = listBox1.SelectedItems.Count - 1; j >= 0; j--)
+                {
+                    int indice = listBox1.SelectedIndices[j];
+                    listBox1.Items.RemoveAt(indice);
+
+                }
             }
         }
 
@@ -128,6 +138,14 @@ namespace Ejercicio4
             else
             {
                 radioButton4.Text = "radiobutton 4";
+            }
+        }
+
+       private void texto_LblElementos(object sender, EventArgs e)
+        {
+            for(int i = 0;i < listBox1.SelectedItems.Count;i++)
+            {
+                lblSeleccionados.Text = listBox1.SelectedItems[i].ToString();
             }
         }
     }
