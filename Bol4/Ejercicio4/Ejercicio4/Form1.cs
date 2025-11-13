@@ -49,21 +49,29 @@ namespace Ejercicio4
 
         }
 
-       
+
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
+                for (int i = listBox1.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox1.SelectedIndices[i];
+                    listBox1.Items.RemoveAt(indice);
 
-                
-
-
+                }
             }
             if (radioButton2.Checked)
             {
 
-                listBox2.Items.Clear();
+                for (int i = listBox2.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox2.SelectedIndices[i];
+                    listBox2.Items.RemoveAt(indice);
+
+                }
+
             }
 
         }
@@ -72,13 +80,10 @@ namespace Ejercicio4
         {
             if (radioButton1.Checked)
             {
-                radioButton1.Text = "Elimina de 1";
+                BtnEliminar.Text = "Eliminar de 1";
 
             }
-            else
-            {
-                radioButton1.Text = "radiobutton 1";
-            }
+          
 
 
         }
@@ -87,23 +92,18 @@ namespace Ejercicio4
         {
             if (radioButton2.Checked)
             {
-                radioButton2.Text = "Elimina de 2";
+                BtnEliminar.Text = "Eliminar de 2";
 
             }
-            else
-            {
-                radioButton2.Text = "radiobutton 2";
-            }
+          
         }
 
         private void BtnTraspasar_Click(object sender, EventArgs e)
         {
             if (radioButton3.Checked)
             {
-                foreach (ListBox listbox in listBox1.Items)
-                {
-
-                }
+                var hola = listBox1.SelectedItems[0];
+                listBox2.Items.Add(hola);
             }
         }
 
