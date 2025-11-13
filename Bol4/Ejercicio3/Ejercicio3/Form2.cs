@@ -16,31 +16,44 @@ namespace Ejercicio3
         {
             InitializeComponent();
 
-            this.pictureBox1.Image = Image.FromFile(rutaArchivo);
             
+            try
+            {
+                this.pictureBox1.Image = Image.FromFile(rutaArchivo);
+
+            }
+            catch (OutOfMemoryException)
+            {
+                MessageBox.Show("Sin memoria",
+                    "Error Memoria",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Error de escritura",
+                    "Error Imagen",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                MessageBox.Show("No se ha encontrado la imagen",
+                    "Error Imagen",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
         private void deformarImagenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-          pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
         }
 
         private void noDeformacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.SizeMode=PictureBoxSizeMode.Zoom;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
     }
 }

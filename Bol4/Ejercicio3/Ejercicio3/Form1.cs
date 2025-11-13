@@ -11,13 +11,16 @@ using System.Windows.Forms;
 
 namespace Ejercicio3
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form//Titulo al principio. Icono en sec. Si se cancela o hay error de imagen que no abra formulario.
     {
         int seg = 0;
         int min = 0;
         public Form1()
         {
             InitializeComponent();
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,41 +46,45 @@ namespace Ejercicio3
                     nombreArchivo = Path.GetFileName(ofd.FileName);
 
 
-                }
 
-                try
-                {
-                    Form2 f2 = new Form2(rutaArchivo);
-                    f2.Text = nombreArchivo;
 
-                    if (checkModal.Checked)
+                    try
                     {
-                        f2.ShowDialog();
+                        Form2 f2 = new Form2(rutaArchivo);
+
+                        f2.Text = nombreArchivo;
+
+                        if (checkModal.Checked)
+                        {
+                            f2.ShowDialog();
+                        }
+                        else
+                        {
+
+                            f2.Show();
+                        }
+
+
+
                     }
-                    else
+                    catch (ArgumentException)
                     {
-                        f2.Show();
+                        MessageBox.Show("Error en la escritura de la imagen",
+                            "Error Imagen",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show("Error con el archivo",
+                            "Error Archivo",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
                     }
 
+
+
                 }
-                catch (ArgumentException)
-                {
-                    MessageBox.Show("Error en la escritura de la imagen",
-                        "Error Imagen",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-                catch (IOException)
-                {
-                    MessageBox.Show("Error con el archivo",
-                        "Error Archivo",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
-
-
-
-
 
 
             }
@@ -86,7 +93,7 @@ namespace Ejercicio3
         private void checkModal_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox check = (CheckBox)sender;
-            if (checkModal.Checked == true)
+            if (checkModal.Checked)
             {
                 checkModal.ForeColor = Color.Red;
 

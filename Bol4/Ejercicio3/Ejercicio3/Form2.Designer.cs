@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deformarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -63,20 +63,20 @@
             this.deformarImagenToolStripMenuItem1,
             this.noDeformacionToolStripMenuItem});
             this.deformarImagenToolStripMenuItem.Name = "deformarImagenToolStripMenuItem";
-            this.deformarImagenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deformarImagenToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.deformarImagenToolStripMenuItem.Text = "Imagen";
             // 
             // deformarImagenToolStripMenuItem1
             // 
             this.deformarImagenToolStripMenuItem1.Name = "deformarImagenToolStripMenuItem1";
-            this.deformarImagenToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.deformarImagenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.deformarImagenToolStripMenuItem1.Text = "Ajuste Perfecto";
             this.deformarImagenToolStripMenuItem1.Click += new System.EventHandler(this.deformarImagenToolStripMenuItem1_Click);
             // 
             // noDeformacionToolStripMenuItem
             // 
             this.noDeformacionToolStripMenuItem.Name = "noDeformacionToolStripMenuItem";
-            this.noDeformacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noDeformacionToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.noDeformacionToolStripMenuItem.Text = "No deformacion";
             this.noDeformacionToolStripMenuItem.Click += new System.EventHandler(this.noDeformacionToolStripMenuItem_Click);
             // 
@@ -86,9 +86,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
