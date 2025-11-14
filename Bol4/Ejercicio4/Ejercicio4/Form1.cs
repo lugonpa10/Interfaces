@@ -12,6 +12,7 @@ namespace Ejercicio4
 {
     public partial class Form1 : Form
     {
+        private ToolTip tooltip;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,8 @@ namespace Ejercicio4
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            lblSeleccionados.Click += texto_LblElementos;
+
+
 
         }
         private void BtnAñadir_Click(object sender, EventArgs e)
@@ -48,6 +50,7 @@ namespace Ejercicio4
                     MessageBoxIcon.Error);
             }
 
+            lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
 
         }
 
@@ -63,6 +66,8 @@ namespace Ejercicio4
                     listBox1.Items.RemoveAt(indice);
 
                 }
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
+
             }
             if (radioButton2.Checked)
             {
@@ -74,6 +79,7 @@ namespace Ejercicio4
 
                 }
 
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
             }
 
         }
@@ -114,6 +120,7 @@ namespace Ejercicio4
                     listBox1.Items.RemoveAt(indice);
 
                 }
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
             }
         }
 
@@ -141,12 +148,30 @@ namespace Ejercicio4
             }
         }
 
-       private void texto_LblElementos(object sender, EventArgs e)
+        private void lblSeleccionados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for(int i = 0;i < listBox1.SelectedItems.Count;i++)
+            lblSeleccionados.Text = "Seleccionados: " + listBox1.SelectedIndices;
+        }
+
+        private void indices_Seleccionados(object sender, EventArgs e)
+        {
+            string texto = "";
+            foreach (var elemento in listBox1.SelectedIndices)
             {
-                lblSeleccionados.Text = listBox1.SelectedItems[i].ToString();
+                texto += $"{elemento}, ";
             }
+            lblSeleccionados.Text = texto;
+
+        }
+
+
+
+        private void texto_Tooltip(object sender, EventArgs e)
+        {
+            ToolTip tooltip = new ToolTip();
+            tooltip.SetToolTip(BtnAñadir, "Añade Elementos");
+            tooltip.SetToolTip(BtnTraspasar, "Traspasa elementos de una coleccion a otra");
+            tooltip.SetToolTip(BtnEliminar, "Elimina elementos");
         }
     }
 }

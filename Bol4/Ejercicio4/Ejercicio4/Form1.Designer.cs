@@ -51,6 +51,7 @@
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.indices_Seleccionados);
             // 
             // listBox2
             // 
@@ -69,6 +70,7 @@
             this.BtnAñadir.Text = "Añadir";
             this.BtnAñadir.UseVisualStyleBackColor = true;
             this.BtnAñadir.Click += new System.EventHandler(this.BtnAñadir_Click);
+            this.BtnAñadir.MouseEnter += new System.EventHandler(this.texto_Tooltip);
             // 
             // BtnEliminar
             // 
@@ -89,6 +91,7 @@
             this.BtnTraspasar.Text = "Traspasar";
             this.BtnTraspasar.UseVisualStyleBackColor = true;
             this.BtnTraspasar.Click += new System.EventHandler(this.BtnTraspasar_Click);
+            this.BtnTraspasar.MouseEnter += new System.EventHandler(this.texto_Tooltip);
             // 
             // textBox1
             // 
