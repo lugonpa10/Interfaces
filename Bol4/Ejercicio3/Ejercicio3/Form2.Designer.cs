@@ -97,7 +97,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deformarImagenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deformarImagenToolStripMenuItem1;

@@ -37,21 +37,21 @@ namespace Ejercicio3
             {
                 ofd.Title = "Escoge una imagen";
                 ofd.InitialDirectory = "c:\\";
-                ofd.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos PNG (*.png)|*.png|Todos los archivos (*.*)|*.*;  ";
+                ofd.Filter = "Archivos JPG (*.jpg)|*.jpg|Archivos PNG (*.png)|*.png|Todos los archivos (*.*)|*.*;";
                 ofd.RestoreDirectory = true;
+
+
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     rutaArchivo = ofd.FileName;
                     nombreArchivo = Path.GetFileName(ofd.FileName);
-
-
-
-
                     try
                     {
                         Form2 f2 = new Form2(rutaArchivo);
 
+                        f2.pictureBox1.Image = Image.FromFile(rutaArchivo);
+                       
                         f2.Text = nombreArchivo;
 
                         if (checkModal.Checked)
@@ -63,7 +63,6 @@ namespace Ejercicio3
 
                             f2.Show();
                         }
-
 
 
                     }
@@ -81,13 +80,31 @@ namespace Ejercicio3
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error);
                     }
+                    catch (OutOfMemoryException)
+                    {
+                        MessageBox.Show("Sin memoria",
+                            "Error Memoria",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
 
+                    }
+                   
 
 
                 }
 
 
             }
+
+
+
+
+
+
+
+
+
+
         }
 
         private void checkModal_CheckedChanged(object sender, EventArgs e)

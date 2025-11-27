@@ -16,33 +16,9 @@ namespace Ejercicio3
         {
             InitializeComponent();
 
-            
-            try
-            {
-                this.pictureBox1.Image = Image.FromFile(rutaArchivo);
+          
+           
 
-            }
-            catch (OutOfMemoryException)
-            {
-                MessageBox.Show("Sin memoria",
-                    "Error Memoria",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("Error de escritura",
-                    "Error Imagen",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
-            catch (System.IO.FileNotFoundException)
-            {
-                MessageBox.Show("No se ha encontrado la imagen",
-                    "Error Imagen",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
         }
         private void deformarImagenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
