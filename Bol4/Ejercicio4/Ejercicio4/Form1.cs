@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ejercicio4
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         private ToolTip tooltip;
         string tituloOriginal = "Ejercicio 4";
@@ -62,29 +62,9 @@ namespace Ejercicio4
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                for (int i = listBox1.SelectedItems.Count - 1; i >= 0; i--)
-                {
-                    int indice = listBox1.SelectedIndices[i];
-                    listBox1.Items.RemoveAt(indice);
+           
 
-                }
-                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
-
-            }
-            if (radioButton2.Checked)
-            {
-
-                for (int i = listBox2.SelectedItems.Count - 1; i >= 0; i--)
-                {
-                    int indice = listBox2.SelectedIndices[i];
-                    listBox2.Items.RemoveAt(indice);
-
-                }
-
-                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
-            }
+            Eliminar();
 
         }
 
@@ -112,6 +92,7 @@ namespace Ejercicio4
 
         private void BtnTraspasar_Click(object sender, EventArgs e)
         {
+
             if (radioButton3.Checked)
             {
                 for (int i = 0; i < listBox1.SelectedItems.Count; i++)
@@ -141,18 +122,17 @@ namespace Ejercicio4
 
                 }
             }
+
+
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton3.Checked)
             {
-               BtnTraspasar.Text = "Traspaso de 1->2";
+                BtnTraspasar.Text = "Traspaso de 1->2";
             }
-            else
-            {
-                BtnTraspasar.Text = "Traspasar 1->2";
-            }
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -161,10 +141,7 @@ namespace Ejercicio4
             {
                 BtnTraspasar.Text = "Traspaso de 2->1";
             }
-            else
-            {
-                radioButton4.Text = "Traspasar ";
-            }
+
         }
 
         private void lblSeleccionados_SelectedIndexChanged(object sender, EventArgs e)
@@ -206,12 +183,12 @@ namespace Ejercicio4
 
             }
 
-                string nuevoTitulo = tituloOriginal.Substring(tituloOriginal.Length - posTitulo);
-                posTitulo++;
-                this.Text = nuevoTitulo;
+            string nuevoTitulo = tituloOriginal.Substring(tituloOriginal.Length - posTitulo);
+            posTitulo++;
+            this.Text = nuevoTitulo;
 
             iconoAlternado = !iconoAlternado;
-           
+
             if (iconoAlternado)
             {
                 this.Icon = Properties.Resources.Icon1;
@@ -224,7 +201,35 @@ namespace Ejercicio4
             }
 
         }
+
+        private void Eliminar()
+        {
+
+            if (radioButton1.Checked)
+            {
+                for (int i = listBox1.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox1.SelectedIndices[i];
+                    listBox1.Items.RemoveAt(indice);
+
+                }
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
+
+            }
+            if (radioButton2.Checked)
+            {
+
+                for (int i = listBox2.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox2.SelectedIndices[i];
+                    listBox2.Items.RemoveAt(indice);
+
+                }
+
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
+            }
+        }
     }
 }
 
-    
+
