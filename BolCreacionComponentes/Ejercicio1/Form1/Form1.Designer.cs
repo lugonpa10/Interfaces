@@ -29,31 +29,20 @@
         private void InitializeComponent()
         {
             this.BtnCambioPos = new System.Windows.Forms.Button();
-            this.labelTextBox1 = new Ejercicio1.LabelTextBox();
             this.BtnAumentar = new System.Windows.Forms.Button();
             this.BtnDisminuir = new System.Windows.Forms.Button();
+            this.labelTextBox1 = new Ejercicio1.LabelTextBox();
             this.SuspendLayout();
             // 
             // BtnCambioPos
             // 
-            this.BtnCambioPos.Location = new System.Drawing.Point(255, 74);
+            this.BtnCambioPos.Location = new System.Drawing.Point(274, 297);
             this.BtnCambioPos.Name = "BtnCambioPos";
             this.BtnCambioPos.Size = new System.Drawing.Size(75, 23);
             this.BtnCambioPos.TabIndex = 1;
             this.BtnCambioPos.Text = "Posicion";
             this.BtnCambioPos.UseVisualStyleBackColor = true;
             this.BtnCambioPos.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // labelTextBox1
-            // 
-            this.labelTextBox1.Location = new System.Drawing.Point(73, 48);
-            this.labelTextBox1.Name = "labelTextBox1";
-            this.labelTextBox1.Posicion = Ejercicio1.LabelTextBox.EPosicion.IZQUIERDA;
-            this.labelTextBox1.Separacion = 0;
-            this.labelTextBox1.Size = new System.Drawing.Size(437, 20);
-            this.labelTextBox1.TabIndex = 0;
-            this.labelTextBox1.TextLbl = "label1";
-            this.labelTextBox1.TextTxt = "";
             // 
             // BtnAumentar
             // 
@@ -76,6 +65,18 @@
             this.BtnDisminuir.UseVisualStyleBackColor = true;
             this.BtnDisminuir.Click += new System.EventHandler(this.BtnDisminuir_Click);
             this.BtnDisminuir.MouseEnter += new System.EventHandler(this.Texto_Botones);
+            // 
+            // labelTextBox1
+            // 
+            this.labelTextBox1.Location = new System.Drawing.Point(116, 56);
+            this.labelTextBox1.Name = "labelTextBox1";
+            this.labelTextBox1.Posicion = Ejercicio1.LabelTextBox.EPosicion.IZQUIERDA;
+            this.labelTextBox1.PswChr = '\0';
+            this.labelTextBox1.Separacion = 0;
+            this.labelTextBox1.Size = new System.Drawing.Size(179, 45);
+            this.labelTextBox1.TabIndex = 0;
+            this.labelTextBox1.TextLbl = "label1";
+            this.labelTextBox1.TextTxt = "";
             // 
             // Form1
             // 

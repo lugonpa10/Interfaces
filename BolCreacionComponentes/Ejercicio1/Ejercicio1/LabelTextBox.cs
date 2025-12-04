@@ -58,19 +58,22 @@ namespace Ejercicio1
                     txt.Location = new Point(lbl.Width + Separacion, 0);
                     //Establecemos ancho del Textbox
                     //(la label tiene ancho por autosize)
-                    txt.Width = this.Width - lbl.Width - Separacion;
+                    txt.Width = 200;
                     //Establecemos altura del componente
                     this.Height = Math.Max(txt.Height, lbl.Height);
+                    this.Width = (lbl.Width + Separacion + txt.Width);
+
                     break;
                 case EPosicion.DERECHA:
                     //Establecemos posición del componente txt
                     txt.Location = new Point(0, 0);
                     //Establecemos ancho del Textbox
-                    txt.Width = this.Width - lbl.Width - Separacion;
+                    txt.Width = 200;
                     //Establecemos posición del componente lbl
                     lbl.Location = new Point(txt.Width + Separacion, 0);
                     //Establecemos altura del componente (Puede sacarse del switch)
                     this.Height = Math.Max(txt.Height, lbl.Height);
+                    this.Width = (lbl.Width + Separacion+ txt.Width);
                     break;
             }
         }
@@ -176,6 +179,7 @@ namespace Ejercicio1
         {
             TxtChanged?.Invoke(this, e);
             Console.WriteLine("Evento TxtChanged");
+            
 
 
         }
@@ -185,14 +189,25 @@ namespace Ejercicio1
             this.OnTxtChanged(e);
         }
 
-        private
 
+        private char pswChr;
+        [Category("Mis Propiedades")]
+        [Description("Contraseña asociada al TextBox interno")]
+        
 
-
-
-        private void LabelTextBox_Load(object sender, EventArgs e)
+        public char PswChr
         {
-
+            set { txt.PasswordChar = value; }
+            get { return txt.PasswordChar; }
         }
+        
+
+
+       
+
+
+
+
+
     }
 }
