@@ -68,25 +68,29 @@
             // 
             // labelTextBox1
             // 
-            this.labelTextBox1.Location = new System.Drawing.Point(116, 56);
+            this.labelTextBox1.ColorLbl = System.Drawing.Color.Black;
+            this.labelTextBox1.Location = new System.Drawing.Point(210, 75);
             this.labelTextBox1.Name = "labelTextBox1";
             this.labelTextBox1.Posicion = Ejercicio1.LabelTextBox.EPosicion.IZQUIERDA;
             this.labelTextBox1.PswChr = '\0';
             this.labelTextBox1.Separacion = 0;
-            this.labelTextBox1.Size = new System.Drawing.Size(179, 45);
-            this.labelTextBox1.TabIndex = 0;
-            this.labelTextBox1.TextLbl = "label1";
+            this.labelTextBox1.Size = new System.Drawing.Size(310, 20);
+            this.labelTextBox1.Subrayar = false;
+            this.labelTextBox1.TabIndex = 4;
+            this.labelTextBox1.TextLbl = "heuwfghrwegbrgr";
             this.labelTextBox1.TextTxt = "";
+            this.labelTextBox1.PosicionChanged += new System.EventHandler(this.labelTextBox1_PosicionChanged);
+            this.labelTextBox1.SeparacionChanged += new System.EventHandler(this.labelTextBox1_SeparacionChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelTextBox1);
             this.Controls.Add(this.BtnDisminuir);
             this.Controls.Add(this.BtnAumentar);
             this.Controls.Add(this.BtnCambioPos);
-            this.Controls.Add(this.labelTextBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -94,11 +98,10 @@
         }
 
         #endregion
-
-        private Ejercicio1.LabelTextBox labelTextBox1;
         private System.Windows.Forms.Button BtnCambioPos;
         private System.Windows.Forms.Button BtnAumentar;
         private System.Windows.Forms.Button BtnDisminuir;
+        private Ejercicio1.LabelTextBox labelTextBox1;
     }
 }
 

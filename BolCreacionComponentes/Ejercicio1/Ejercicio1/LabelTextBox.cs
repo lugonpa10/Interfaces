@@ -11,8 +11,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Ejercicio1
 {
-    public partial class LabelTextBox: UserControl
+    public partial class LabelTextBox : UserControl
     {
+
         public enum EPosicion
         {
             IZQUIERDA, DERECHA
@@ -20,7 +21,9 @@ namespace Ejercicio1
         public LabelTextBox()
         {
             InitializeComponent();
-           
+            TextLbl = Name;
+            TextTxt = "";
+            recolocar();
         }
 
         private EPosicion posicion = EPosicion.IZQUIERDA;
@@ -33,8 +36,8 @@ namespace Ejercicio1
                 if (Enum.IsDefined(typeof(EPosicion), value))
                 {
                     posicion = value;
-                    recolocar();
                     OnPosicionChanged(EventArgs.Empty);
+                    Refresh();
                 }
                 else
                 {
@@ -58,7 +61,7 @@ namespace Ejercicio1
                     txt.Location = new Point(lbl.Width + Separacion, 0);
                     //Establecemos ancho del Textbox
                     //(la label tiene ancho por autosize)
-                    txt.Width = 200;
+                    //txt.Width = 200;
                     //Establecemos altura del componente
                     this.Height = Math.Max(txt.Height, lbl.Height);
                     this.Width = (lbl.Width + Separacion + txt.Width);
@@ -68,12 +71,12 @@ namespace Ejercicio1
                     //Establecemos posición del componente txt
                     txt.Location = new Point(0, 0);
                     //Establecemos ancho del Textbox
-                    txt.Width = 200;
+                    //txt.Width = 200;
                     //Establecemos posición del componente lbl
                     lbl.Location = new Point(txt.Width + Separacion, 0);
                     //Establecemos altura del componente (Puede sacarse del switch)
                     this.Height = Math.Max(txt.Height, lbl.Height);
-                    this.Width = (lbl.Width + Separacion+ txt.Width);
+                    this.Width = (lbl.Width + Separacion + txt.Width);
                     break;
             }
         }
@@ -89,7 +92,8 @@ namespace Ejercicio1
                 if (value >= 0)
                 {
                     separacion = value;
-                    recolocar();
+                    OnSeparacionChanged(EventArgs.Empty);
+                    Refresh();
                 }
                 else
                 {
@@ -108,7 +112,7 @@ namespace Ejercicio1
             set
             {
                 lbl.Text = value;
-                recolocar();
+                Refresh();
             }
             get
             {
@@ -129,11 +133,7 @@ namespace Ejercicio1
             }
         }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            recolocar();
-        }
+
 
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -153,22 +153,22 @@ namespace Ejercicio1
         }
 
         [Category("La propiedad cambió")]
-        [Description("Se lanza cuando la propiedad Posicion cambia")]
+        [Description("Se lanza cuando la propiedad Posicion cambia")]//Ojo texto
         public event System.EventHandler SeparacionChanged;
 
         protected virtual void OnSeparacionChanged(EventArgs e)
         {
-           SeparacionChanged?.Invoke(this, e);
+            SeparacionChanged?.Invoke(this, e);
         }
 
-        private void txt_KeyUp(object sender,KeyEventArgs e)
+        private void txt_KeyUp(object sender, KeyEventArgs e)
         {
             this.OnKeyUp(e);
         }
-        protected virtual void OnKeyUp(EventArgs e)
-        {
-            Console.WriteLine("Evento Key_Up");
-        }
+        //protected virtual void OnKeyUp(EventArgs e)
+        //{
+        //    Console.WriteLine("Evento Key_Up");
+        //}
 
 
         [Category("La propiedad cambió")]
@@ -178,32 +178,70 @@ namespace Ejercicio1
         protected virtual void OnTxtChanged(EventArgs e)
         {
             TxtChanged?.Invoke(this, e);
-            Console.WriteLine("Evento TxtChanged");
-            
+           // Console.WriteLine("Evento TxtChanged");
+
 
 
         }
 
-        private void txt_TxtChanged(object sender,EventArgs e)
+        private void txt_TxtChanged(object sender, EventArgs e)
         {
             this.OnTxtChanged(e);
         }
 
 
-        private char pswChr;
+  
         [Category("Mis Propiedades")]
-        [Description("Contraseña asociada al TextBox interno")]
-        
+        [Description("Contraseña asociada al TextBox interno")]///
+
 
         public char PswChr
         {
             set { txt.PasswordChar = value; }
             get { return txt.PasswordChar; }
         }
-        
 
 
-       
+        [Category("Mis Propiedades")]
+        [Description("Subraya la lbl")]
+        private bool subrayar;
+        public bool Subrayar
+        {
+            set
+            {
+                subrayar = value;
+                Refresh();
+            }
+            get { return subrayar; }
+        }
+        [Category("Mis Propiedades")]
+        [Description("Color de Subrayado")]
+        private Color colorLbl;
+        public Color ColorLbl
+        {
+            set
+            {
+                colorLbl = value;
+                Refresh();
+            }
+            get { return colorLbl; }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            if (subrayar)
+            {
+                e.Graphics.DrawLine(new Pen(ColorLbl), lbl.Left, this.Height - 1,
+                    lbl.Left + lbl.Width, this.Height - 1);
+            }
+            recolocar();
+
+        }
+
+
+
+
 
 
 

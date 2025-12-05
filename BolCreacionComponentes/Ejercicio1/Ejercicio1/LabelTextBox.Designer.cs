@@ -43,9 +43,9 @@
             // 
             // txt
             // 
-            this.txt.Location = new System.Drawing.Point(228, 59);
+            this.txt.Location = new System.Drawing.Point(197, 59);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(100, 20);
+            this.txt.Size = new System.Drawing.Size(221, 20);
             this.txt.TabIndex = 1;
             this.txt.TextChanged += new System.EventHandler(this.txt_TxtChanged);
             this.txt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_KeyUp);
