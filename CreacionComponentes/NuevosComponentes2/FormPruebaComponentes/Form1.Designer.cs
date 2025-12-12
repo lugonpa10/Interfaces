@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
+            this.labelTextBox2 = new NuevosComponentes2.LabelTextBox();
             this.labelTextBox1 = new NuevosComponentes2.LabelTextBox();
+            this.etiquetaAviso1 = new NuevosComponentes2.EtiquetaAviso();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(323, 206);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labelTextBox2
+            // 
+            this.labelTextBox2.Location = new System.Drawing.Point(114, 146);
+            this.labelTextBox2.Name = "labelTextBox2";
+            this.labelTextBox2.Posicion = NuevosComponentes2.EPosicion.IZQUIERDA;
+            this.labelTextBox2.Separacion = 0;
+            this.labelTextBox2.Size = new System.Drawing.Size(394, 20);
+            this.labelTextBox2.TabIndex = 1;
+            this.labelTextBox2.TextLbl = "UserControl1";
+            this.labelTextBox2.TextTxt = "";
             // 
             // labelTextBox1
             // 
-            this.labelTextBox1.Location = new System.Drawing.Point(114, 74);
+            this.labelTextBox1.Location = new System.Drawing.Point(177, 294);
             this.labelTextBox1.Name = "labelTextBox1";
             this.labelTextBox1.Posicion = NuevosComponentes2.EPosicion.IZQUIERDA;
             this.labelTextBox1.Separacion = 40;
@@ -42,14 +66,28 @@
             this.labelTextBox1.TextLbl = "label1";
             this.labelTextBox1.TextTxt = "";
             // 
+            // etiquetaAviso1
+            // 
+            this.etiquetaAviso1.Location = new System.Drawing.Point(423, 70);
+            this.etiquetaAviso1.Marca = NuevosComponentes2.EMarca.Nada;
+            this.etiquetaAviso1.Name = "etiquetaAviso1";
+            this.etiquetaAviso1.Size = new System.Drawing.Size(78, 13);
+            this.etiquetaAviso1.TabIndex = 3;
+            this.etiquetaAviso1.Text = "etiquetaAviso1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.etiquetaAviso1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelTextBox2);
             this.Controls.Add(this.labelTextBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
 
         }
@@ -57,6 +95,9 @@
         #endregion
 
         private NuevosComponentes2.LabelTextBox labelTextBox1;
+        private NuevosComponentes2.LabelTextBox labelTextBox2;
+        private System.Windows.Forms.Button button1;
+        private NuevosComponentes2.EtiquetaAviso etiquetaAviso1;
     }
 }
 

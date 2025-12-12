@@ -23,7 +23,6 @@ namespace NuevosComponentes2
             InitializeComponent();
             TextLbl = Name;
             TextTxt = "";
-            recolocar();
 
         }
 
@@ -38,7 +37,8 @@ namespace NuevosComponentes2
                 if (Enum.IsDefined(typeof(EPosicion), value))
                 {
                     posicion = value;
-                    recolocar();
+                    Refresh();
+
                 }
                 else
                 {
@@ -91,7 +91,7 @@ namespace NuevosComponentes2
                 if (value >= 0)
                 {
                     separacion = value;
-                    recolocar();
+                    Refresh();
                 }
                 else
                 {
@@ -136,6 +136,9 @@ namespace NuevosComponentes2
         {
             base.OnPaint(e);
             recolocar();
+            e.Graphics.DrawLine(new Pen(Color.Violet),
+ lbl.Left, this.Height - 1,
+ lbl.Left + lbl.Width, this.Height - 1);
         }
 
         private void txt_KeyPress(object sender, KeyPressEventArgs e)
@@ -156,6 +159,6 @@ namespace NuevosComponentes2
         }
 
 
-      
+
     }
 }
