@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,14 @@ namespace NuevosComponentes2
             Size tam = g.MeasureString(this.Text, this.Font).ToSize();
             this.Size = new Size(tam.Width + offsetX + grosor, tam.Height + offsetY * 2);
             b.Dispose();
+            Point x = new Point(0);
+            Point y = new Point(200);
+            if (gradiente)
+            {
+                LinearGradientBrush l = new LinearGradientBrush(x, y, color1, color2);
+                g.FillRectangle(l, this.ClientRectangle);
+            }
+
 
         }
         protected override void OnTextChanged(EventArgs e)
@@ -88,25 +97,30 @@ namespace NuevosComponentes2
             base.OnTextChanged(e);
             this.Refresh();
         }
-
+        [Category("Mis propiedades")]
+        [Description("Color 1 para el gradiente")]
         private Color color1;
         public Color Color1
         {
             set
             {
                 color1 = value;
+                Refresh();
             }
             get
             {
                 return color1;
             }
         }
+        [Category("Mis propiedades")]
+        [Description("Color 2 para el gradiente")]
         private Color color2;
         public Color Color2
         {
             set
             {
                 color2 = value;
+                Refresh();
             }
             get
             {
@@ -123,12 +137,15 @@ namespace NuevosComponentes2
             set
             {
                 gradiente = value;
+                Refresh();
             }
             get
             {
                 return gradiente;
             }
         }
+
+
 
 
 
