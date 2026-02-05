@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.labelTextBox1 = new NuevosComponentes2.LabelTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -40,6 +41,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+            // labelTextBox1
+            // 
+            this.labelTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.labelTextBox1.Name = "labelTextBox1";
+            this.labelTextBox1.Posicion = NuevosComponentes2.EPosicion.IZQUIERDA;
+            this.labelTextBox1.Separacion = 0;
+            this.labelTextBox1.Size = new System.Drawing.Size(394, 20);
+            this.labelTextBox1.TabIndex = 0;
+            this.labelTextBox1.TextLbl = "LabelTextBox";
+            this.labelTextBox1.TextTxt = "";
+            // 
             // EtiquetaAviso
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -50,5 +62,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private LabelTextBox labelTextBox1;
     }
 }

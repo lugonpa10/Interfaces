@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NuevosComponentes2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +16,10 @@ namespace FormPruebaComponentes
         public Form1()
         {
             InitializeComponent();
+            etiquetaAviso1.ClickEnMarca += etiquetaAviso1_ClickEnMarca;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -53,7 +52,10 @@ namespace FormPruebaComponentes
 
         }
 
-       
+        private void etiquetaAviso1_ClickEnMarca(object sender, EventArgs e)
+        {
+            this.Text = "Click detectado en la marca";
+        }
     }
 
 }
