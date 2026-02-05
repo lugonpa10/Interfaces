@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace Ejercicio4
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
         private ToolTip tooltip;
+        string tituloOriginal = "Ejercicio 4";
+        int posTitulo = 0;
+        bool iconoAlternado = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -58,29 +62,9 @@ namespace Ejercicio4
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                for (int i = listBox1.SelectedItems.Count - 1; i >= 0; i--)
-                {
-                    int indice = listBox1.SelectedIndices[i];
-                    listBox1.Items.RemoveAt(indice);
+           
 
-                }
-                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
-
-            }
-            if (radioButton2.Checked)
-            {
-
-                for (int i = listBox2.SelectedItems.Count - 1; i >= 0; i--)
-                {
-                    int indice = listBox2.SelectedIndices[i];
-                    listBox2.Items.RemoveAt(indice);
-
-                }
-
-                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
-            }
+            Eliminar();
 
         }
 
@@ -108,6 +92,7 @@ namespace Ejercicio4
 
         private void BtnTraspasar_Click(object sender, EventArgs e)
         {
+
             if (radioButton3.Checked)
             {
                 for (int i = 0; i < listBox1.SelectedItems.Count; i++)
@@ -122,30 +107,41 @@ namespace Ejercicio4
                 }
                 lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
             }
+
+            if (radioButton4.Checked)
+            {
+                for (int i = 0; i < listBox2.SelectedItems.Count; i++)
+                {
+                    listBox1.Items.Add(listBox2.SelectedItems[i]);
+
+                }
+                for (int j = listBox2.SelectedItems.Count - 1; j >= 0; j--)
+                {
+                    int indice = listBox2.SelectedIndices[j];
+                    listBox2.Items.RemoveAt(indice);
+
+                }
+            }
+
+
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton3.Checked)
             {
-                radioButton3.Text = "Traspaso de 1->2";
+                BtnTraspasar.Text = "Traspaso de 1->2";
             }
-            else
-            {
-                radioButton3.Text = "radiobutton 3";
-            }
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton4.Checked)
             {
-                radioButton4.Text = "Traspaso de 2->1";
+                BtnTraspasar.Text = "Traspaso de 2->1";
             }
-            else
-            {
-                radioButton4.Text = "radiobutton 4";
-            }
+
         }
 
         private void lblSeleccionados_SelectedIndexChanged(object sender, EventArgs e)
@@ -158,7 +154,7 @@ namespace Ejercicio4
             string texto = "";
             foreach (var elemento in listBox1.SelectedIndices)
             {
-                texto += $"{elemento}, ";
+                texto += $"{elemento} ";
             }
             lblSeleccionados.Text = texto;
 
@@ -172,6 +168,68 @@ namespace Ejercicio4
             tooltip.SetToolTip(BtnAñadir, "Añade Elementos");
             tooltip.SetToolTip(BtnTraspasar, "Traspasa elementos de una coleccion a otra");
             tooltip.SetToolTip(BtnEliminar, "Elimina elementos");
+            tooltip.SetToolTip(listBox2, "Elementos: " + listBox2.Items.Count);
+        }
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (posTitulo > tituloOriginal.Length)
+            {
+
+                posTitulo = 1;
+
+            }
+
+            string nuevoTitulo = tituloOriginal.Substring(tituloOriginal.Length - posTitulo);
+            posTitulo++;
+            this.Text = nuevoTitulo;
+
+            iconoAlternado = !iconoAlternado;
+
+            if (iconoAlternado)
+            {
+                this.Icon = Properties.Resources.Icon1;
+
+            }
+            else
+            {
+                this.Icon = Properties.Resources.icono33;
+
+            }
+
+        }
+
+        private void Eliminar()
+        {
+
+            if (radioButton1.Checked)
+            {
+                for (int i = listBox1.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox1.SelectedIndices[i];
+                    listBox1.Items.RemoveAt(indice);
+
+                }
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
+
+            }
+            if (radioButton2.Checked)
+            {
+
+                for (int i = listBox2.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    int indice = listBox2.SelectedIndices[i];
+                    listBox2.Items.RemoveAt(indice);
+
+                }
+
+                lblElementos.Text = "Numero Elementos: " + listBox1.Items.Count.ToString();
+            }
         }
     }
 }
+
+

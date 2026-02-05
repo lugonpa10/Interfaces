@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{990C2BD4-A97D-4D18-B98D-74F2D8C1FCEE}</ProjectGuid>
+    <ProjectGuid>{7CF67C40-E41C-4FC6-9F7D-0CD10B7C798A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio4</RootNamespace>
-    <AssemblyName>Ejercicio4</AssemblyName>
+    <RootNamespace>Form1</RootNamespace>
+    <AssemblyName>Form1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,28 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngtree-cute-cartoon-light-bulb-image_1134759.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono11.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon2.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon3.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngtree-image-icon-png-image_5139396.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1160358.ico" />
+    <ProjectReference Include="..\Ejercicio1\Ejercicio1.csproj">
+      <Project>{EC384FCD-6F0B-4E9A-A1AF-33A0565D092E}</Project>
+      <Name>Ejercicio1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
