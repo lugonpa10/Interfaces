@@ -16,45 +16,16 @@ namespace FormPruebaComponentes
         public Form1()
         {
             InitializeComponent();
-            etiquetaAviso1.ClickEnMarca += etiquetaAviso1_ClickEnMarca;
-        }
 
+
+
+        }
        
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        private void etiquetaAviso1_ClickEnMarca_1(object sender, EventArgs e)
         {
-            //e.Graphics.DrawString("Prueba de escritura de texto",
-            //this.Font, Brushes.BlueViolet, 10, 10);
-            //          e.Graphics.FillEllipse(Brushes.Aquamarine, 10, 30, 100, 50);
-        }
-        bool pintar = true;
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            if (pintar)
-            {
 
-                e.Graphics.DrawString("Prueba de escritura de texto",
-    this.Font, Brushes.BlueViolet, 10, 10);
-                e.Graphics.FillEllipse(Brushes.Aquamarine, 10, 30, 100, 50);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pintar = !pintar;
-            this.Refresh();
-            this.Text= pintar.ToString();
-            //Graphics gr = this.CreateGraphics();
-            //gr.DrawString("Escribo fuera del OnPaint", this.Font, Brushes.BlueViolet, 10, 100);
-            //gr.DrawImage(new Bitmap(@"C:\Windows\Web\Wallpaper\Theme2\img7.jpg"), 10, 130);
-
-
-        }
-
-        private void etiquetaAviso1_ClickEnMarca(object sender, EventArgs e)
-        {
-            this.Text = "Click detectado en la marca";
+            Console.WriteLine("Marca Pulsada");
         }
     }
 
