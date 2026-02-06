@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.etiquetaAviso2 = new NuevosComponentes2.EtiquetaAviso();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.etiquetaAviso1 = new NuevosComponentes2.EtiquetaAviso();
-            this.labelTextBox2 = new NuevosComponentes2.LabelTextBox();
-            this.labelTextBox1 = new NuevosComponentes2.LabelTextBox();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(323, 206);
@@ -58,54 +56,31 @@
             this.etiquetaAviso2.TabIndex = 4;
             this.etiquetaAviso2.Text = "etiquetaAviso2";
             // 
+=======
+>>>>>>> d9517c23f547a3a51dd1bebea94fd05741cb92d4
             // etiquetaAviso1
             // 
             this.etiquetaAviso1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.etiquetaAviso1.Color1 = System.Drawing.Color.Empty;
-            this.etiquetaAviso1.Color2 = System.Drawing.Color.Empty;
-            this.etiquetaAviso1.Gradiente = false;
-            this.etiquetaAviso1.Location = new System.Drawing.Point(423, 70);
-            this.etiquetaAviso1.Marca = NuevosComponentes2.EMarca.Cruz;
+            this.etiquetaAviso1.Color1 = System.Drawing.Color.Magenta;
+            this.etiquetaAviso1.Color2 = System.Drawing.Color.Blue;
+            this.etiquetaAviso1.Gradiente = true;
+            this.etiquetaAviso1.ImagenMarca = ((System.Drawing.Image)(resources.GetObject("etiquetaAviso1.ImagenMarca")));
+            this.etiquetaAviso1.Location = new System.Drawing.Point(268, 86);
+            this.etiquetaAviso1.Marca = NuevosComponentes2.EMarca.Imagen;
             this.etiquetaAviso1.Name = "etiquetaAviso1";
-            this.etiquetaAviso1.Size = new System.Drawing.Size(97, 15);
-            this.etiquetaAviso1.TabIndex = 3;
+            this.etiquetaAviso1.Size = new System.Drawing.Size(91, 13);
+            this.etiquetaAviso1.TabIndex = 0;
             this.etiquetaAviso1.Text = "etiquetaAviso1";
-            // 
-            // labelTextBox2
-            // 
-            this.labelTextBox2.Location = new System.Drawing.Point(114, 146);
-            this.labelTextBox2.Name = "labelTextBox2";
-            this.labelTextBox2.Posicion = NuevosComponentes2.EPosicion.IZQUIERDA;
-            this.labelTextBox2.Separacion = 0;
-            this.labelTextBox2.Size = new System.Drawing.Size(394, 20);
-            this.labelTextBox2.TabIndex = 1;
-            this.labelTextBox2.TextLbl = "UserControl1";
-            this.labelTextBox2.TextTxt = "";
-            // 
-            // labelTextBox1
-            // 
-            this.labelTextBox1.Location = new System.Drawing.Point(177, 294);
-            this.labelTextBox1.Name = "labelTextBox1";
-            this.labelTextBox1.Posicion = NuevosComponentes2.EPosicion.IZQUIERDA;
-            this.labelTextBox1.Separacion = 40;
-            this.labelTextBox1.Size = new System.Drawing.Size(310, 20);
-            this.labelTextBox1.TabIndex = 0;
-            this.labelTextBox1.TextLbl = "label1";
-            this.labelTextBox1.TextTxt = "";
+            this.etiquetaAviso1.ClickEnMarca += new System.EventHandler(this.etiquetaAviso1_ClickEnMarca);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.etiquetaAviso2);
             this.Controls.Add(this.etiquetaAviso1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.labelTextBox2);
-            this.Controls.Add(this.labelTextBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
 
@@ -113,11 +88,7 @@
 
         #endregion
 
-        private NuevosComponentes2.LabelTextBox labelTextBox1;
-        private NuevosComponentes2.LabelTextBox labelTextBox2;
-        private System.Windows.Forms.Button button1;
         private NuevosComponentes2.EtiquetaAviso etiquetaAviso1;
-        private NuevosComponentes2.EtiquetaAviso etiquetaAviso2;
     }
 }
 

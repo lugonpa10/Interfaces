@@ -15,7 +15,8 @@ namespace NuevosComponentes2
     {
         Nada,
         Cruz,
-        Circulo
+        Circulo,
+        Imagen
     }
     public partial class EtiquetaAviso : Control
     {
@@ -45,6 +46,13 @@ namespace NuevosComponentes2
         {
             base.OnPaint(e);
             Graphics g = e.Graphics;
+            if (gradiente)
+            {
+                LinearGradientBrush l = new LinearGradientBrush(this.ClientRectangle, color1, color2, LinearGradientMode.Horizontal);
+                g.FillRectangle(l, this.ClientRectangle);
+                l.Dispose();
+
+            }
             int grosor = 0; //Grosor de las líneas de dibujo
             int offsetX = 0; //Desplazamiento a la derecha del texto
             int offsetY = 0; //Desplazamiento hacia abajo del texto
@@ -63,6 +71,8 @@ namespace NuevosComponentes2
                     h, h);
                     offsetX = h + grosor;
                     offsetY = grosor;
+                    zonaEvento = new Rectangle(0, 0, h, h);
+
                     break;
                 case EMarca.Cruz:
                     grosor = 3;
@@ -71,10 +81,23 @@ namespace NuevosComponentes2
                     g.DrawLine(lapiz, h, grosor, grosor, h);
                     offsetX = h + grosor;
                     offsetY = grosor / 2;
+                    zonaEvento = new Rectangle(0, 0, h, h);
+
                     //Es recomendable liberar recursos de dibujo pues se
                     //pueden realizar muchos y cogen memoria
                     lapiz.Dispose();
                     break;
+                case EMarca.Imagen:
+                    if(imagenMarca != null)
+                    {
+                        g.DrawImage(imagenMarca, 0, 0, h, h);
+                        offsetX = h;
+                    }
+
+                    zonaEvento = new Rectangle(0, 0, h, h);
+                    break;
+
+
             }
             //Finalmente pintamos el Texto; desplazado si fuera necesario
             SolidBrush b = new SolidBrush(this.ForeColor);
@@ -84,12 +107,15 @@ namespace NuevosComponentes2
             b.Dispose();
             Point x = new Point(0);
             Point y = new Point(200);
+<<<<<<< HEAD
             if (gradiente)
             {
                 LinearGradientBrush l = new LinearGradientBrush(x, y, color1, color2);
                 g.FillRectangle(l, this.ClientRectangle);
 
             }
+=======
+>>>>>>> d9517c23f547a3a51dd1bebea94fd05741cb92d4
 
 
         }
@@ -98,9 +124,9 @@ namespace NuevosComponentes2
             base.OnTextChanged(e);
             this.Refresh();
         }
+        private Color color1;
         [Category("Mis propiedades")]
         [Description("Color 1 para el gradiente")]
-        private Color color1;
         public Color Color1
         {
             set
@@ -113,9 +139,9 @@ namespace NuevosComponentes2
                 return color1;
             }
         }
+        private Color color2;
         [Category("Mis propiedades")]
         [Description("Color 2 para el gradiente")]
-        private Color color2;
         public Color Color2
         {
             set
@@ -129,9 +155,9 @@ namespace NuevosComponentes2
             }
         }
 
+        private bool gradiente;
         [Category("Mis propiedades")]
         [Description("Si esta a True muestra un degradado en el color")]
-        private bool gradiente;
 
         public bool Gradiente
         {
@@ -145,6 +171,42 @@ namespace NuevosComponentes2
                 return gradiente;
             }
         }
+
+        private Image imagenMarca;
+        [Category("Mis Propiedades")]
+        [Description("Muestra una imagen que escoja el usuario")]
+        public Image ImagenMarca
+        {
+            set
+            {
+                imagenMarca = value;
+            }
+            get
+            {
+                return imagenMarca;
+            }
+        }
+        [Category("Acción")]
+        [Description("Se lanza cuando se hace click en la marca")]
+        public event EventHandler ClickEnMarca;
+        public Rectangle zonaEvento;
+
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+            if(marca != EMarca.Nada && zonaEvento.Contains(e.Location))
+            {
+                ClickEnMarca?.Invoke(this, EventArgs.Empty);
+
+            }
+
+        }
+
+
+
+
+
+      
 
 
 
