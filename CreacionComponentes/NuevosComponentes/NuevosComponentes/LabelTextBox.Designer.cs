@@ -1,6 +1,6 @@
-﻿namespace Ejercicio5
+﻿namespace NuevosComponentes
 {
-    partial class Form1
+    partial class LabelTextBox
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Código generado por el Diseñador de componentes
 
         /// <summary>
         /// Método necesario para admitir el Diseñador. No se puede modificar
@@ -28,26 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNum = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtNum
+            // lbl
             // 
-            this.txtNum.Location = new System.Drawing.Point(318, 76);
-            this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(183, 20);
-            this.txtNum.TabIndex = 0;
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(29, 43);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(35, 13);
+            this.lbl.TabIndex = 0;
+            this.lbl.Text = "label1";
             // 
-            // Form1
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(122, 36);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(100, 20);
+            this.txt.TabIndex = 1;
+            // 
+            // LabelTextBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtNum);
-            this.KeyPreview = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.lbl);
+            this.Name = "LabelTextBox";
+            this.Size = new System.Drawing.Size(300, 107);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,7 +63,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txt;
     }
 }
-

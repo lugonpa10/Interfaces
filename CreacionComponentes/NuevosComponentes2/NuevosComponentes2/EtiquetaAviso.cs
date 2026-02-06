@@ -88,6 +88,7 @@ namespace NuevosComponentes2
             {
                 LinearGradientBrush l = new LinearGradientBrush(x, y, color1, color2);
                 g.FillRectangle(l, this.ClientRectangle);
+
             }
 
 

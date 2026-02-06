@@ -12,6 +12,7 @@ namespace Ejercicio5
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -54,17 +55,59 @@ namespace Ejercicio5
                 button.Location = new Point(x, y);
                 this.Controls.Add(button);
 
-                MouseEnter += cambio_color;
+                button.MouseEnter += cambio_color;
+                button.MouseLeave += cambio_color;
+                button.MouseClick += pulsar_boton;
+               
+
+
 
             }
         }
 
         private void cambio_color(object sender, EventArgs e)
         {
-           Button btn = (Button)sender;
-           if(btn.BackColor)
+
+            Button btn = (Button)sender;
+
+            if (btn.BackColor != Color.Green)
+            {
+
+                if (btn.BackColor == DefaultBackColor)
+                {
+                    btn.BackColor = Color.Red;
+                }
+                else
+                {
+                    btn.BackColor = DefaultBackColor;
+
+                }
+            }
+
+
+
+
+
+
+
 
         }
+        private void pulsar_boton(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+
+            btn.BackColor = Color.Green;
+
+
+        }
+
+        private void Texto(object sender,EventArgs e)
+        {
+            
+        }
+
+
 
 
 

@@ -48,10 +48,10 @@
             // etiquetaAviso2
             // 
             this.etiquetaAviso2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.etiquetaAviso2.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.etiquetaAviso2.Color2 = System.Drawing.Color.Cyan;
+            this.etiquetaAviso2.Color1 = System.Drawing.Color.Snow;
+            this.etiquetaAviso2.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.etiquetaAviso2.Gradiente = true;
-            this.etiquetaAviso2.Location = new System.Drawing.Point(146, 49);
+            this.etiquetaAviso2.Location = new System.Drawing.Point(147, 49);
             this.etiquetaAviso2.Marca = NuevosComponentes2.EMarca.Nada;
             this.etiquetaAviso2.Name = "etiquetaAviso2";
             this.etiquetaAviso2.Size = new System.Drawing.Size(78, 13);

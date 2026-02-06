@@ -68,10 +68,11 @@
             // 
             // labelTextBox1
             // 
-            this.labelTextBox1.ColorLbl = System.Drawing.Color.Black;
+            this.labelTextBox1.ColorLbl = System.Drawing.Color.Red;
+            this.labelTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelTextBox1.Location = new System.Drawing.Point(210, 75);
             this.labelTextBox1.Name = "labelTextBox1";
-            this.labelTextBox1.Posicion = Ejercicio1.LabelTextBox.EPosicion.IZQUIERDA;
+            this.labelTextBox1.Posicion = Ejercicio1.LabelTextBox.EPosicion.DERECHA;
             this.labelTextBox1.PswChr = '\0';
             this.labelTextBox1.Separacion = 0;
             this.labelTextBox1.Size = new System.Drawing.Size(310, 20);

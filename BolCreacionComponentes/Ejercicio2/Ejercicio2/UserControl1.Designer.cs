@@ -1,6 +1,6 @@
-﻿namespace Ejercicio5
+﻿namespace Ejercicio2
 {
-    partial class Form1
+    partial class UserControl1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Código generado por el Diseñador de componentes
 
         /// <summary>
         /// Método necesario para admitir el Diseñador. No se puede modificar
@@ -28,34 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNum = new System.Windows.Forms.TextBox();
+            this.etiquetaAviso1 = new NuevosComponentes2.EtiquetaAviso();
             this.SuspendLayout();
             // 
-            // txtNum
+            // etiquetaAviso1
             // 
-            this.txtNum.Location = new System.Drawing.Point(318, 76);
-            this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(183, 20);
-            this.txtNum.TabIndex = 0;
+            this.etiquetaAviso1.Location = new System.Drawing.Point(244, 99);
+            this.etiquetaAviso1.Marca = NuevosComponentes2.EMarca.Nada;
+            this.etiquetaAviso1.Name = "etiquetaAviso1";
+            this.etiquetaAviso1.Size = new System.Drawing.Size(78, 13);
+            this.etiquetaAviso1.TabIndex = 0;
+            this.etiquetaAviso1.Text = "etiquetaAviso1";
             // 
-            // Form1
+            // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtNum);
-            this.KeyPreview = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.etiquetaAviso1);
+            this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(800, 450);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNum;
+        private NuevosComponentes2.EtiquetaAviso etiquetaAviso1;
     }
 }
-
