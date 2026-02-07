@@ -20,7 +20,6 @@ namespace Ejercicio5
         private void Form1_Load(object sender, EventArgs e)
         {
             Button button;
-<<<<<<< HEAD
             int x = 50;
             int y = 50;
             
@@ -31,7 +30,6 @@ namespace Ejercicio5
                 {
                     x = 50;
                     y += 60;
-=======
             int x = 0;
             int y = 0;
             for (int i = 0; i < 12; i++)
@@ -43,13 +41,13 @@ namespace Ejercicio5
                     x = 40;
                     y += 40;
 
->>>>>>> f57986b9b4bf38f55cb1b69426aa98e4ec1b2a50
+
                 }
                 else
                 {
                     x += 80;
                 }
-<<<<<<< HEAD
+
                 button = new Button();
                 button.Text = i.ToString();
 
@@ -63,7 +61,7 @@ namespace Ejercicio5
                 {
                     button.Text = "#";
 
-=======
+
 
                 button.Text = (i + 1).ToString();
                 if (i == 9)
@@ -77,13 +75,13 @@ namespace Ejercicio5
                 else if (i == 11)
                 {
                     button.Text = "#";
->>>>>>> f57986b9b4bf38f55cb1b69426aa98e4ec1b2a50
+
                 }
 
                 button.Location = new Point(x, y);
                 this.Controls.Add(button);
 
-<<<<<<< HEAD
+
                 button.Click += Interacciones_Botones;
                 button.MouseEnter += Colores_Botones;
                 button.MouseLeave += Colores_Botones;
@@ -133,7 +131,7 @@ namespace Ejercicio5
             
 
         }
-=======
+
                 MouseEnter += cambio_color;
 
             }
@@ -148,6 +146,5 @@ namespace Ejercicio5
 
 
 
->>>>>>> f57986b9b4bf38f55cb1b69426aa98e4ec1b2a50
     }
 }
