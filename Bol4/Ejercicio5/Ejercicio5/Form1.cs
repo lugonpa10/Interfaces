@@ -12,6 +12,7 @@ namespace Ejercicio5
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +21,10 @@ namespace Ejercicio5
         private void Form1_Load(object sender, EventArgs e)
         {
             Button button;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a40459d791d385cf9f6556bbf033fa1ee42f753
             int x = 50;
             int y = 50;
             
@@ -30,6 +35,10 @@ namespace Ejercicio5
                 {
                     x = 50;
                     y += 60;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a40459d791d385cf9f6556bbf033fa1ee42f753
             int x = 0;
             int y = 0;
             for (int i = 0; i < 12; i++)
@@ -41,7 +50,10 @@ namespace Ejercicio5
                     x = 40;
                     y += 40;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9a40459d791d385cf9f6556bbf033fa1ee42f753
                 }
                 else
                 {
@@ -82,6 +94,17 @@ namespace Ejercicio5
                 this.Controls.Add(button);
 
 
+<<<<<<< HEAD
+=======
+                button.MouseEnter += cambio_color;
+                button.MouseLeave += cambio_color;
+                button.MouseClick += pulsar_boton;
+               
+
+
+
+
+>>>>>>> 9a40459d791d385cf9f6556bbf033fa1ee42f753
                 button.Click += Interacciones_Botones;
                 button.MouseEnter += Colores_Botones;
                 button.MouseLeave += Colores_Botones;
@@ -134,17 +157,59 @@ namespace Ejercicio5
 
                 MouseEnter += cambio_color;
 
+
             }
         }
 
         private void cambio_color(object sender, EventArgs e)
         {
-           Button btn = (Button)sender;
-           if(btn.BackColor)
 
+            Button btn = (Button)sender;
+
+            if (btn.BackColor != Color.Green)
+            {
+
+                if (btn.BackColor == DefaultBackColor)
+                {
+                    btn.BackColor = Color.Red;
+                }
+                else
+                {
+                    btn.BackColor = DefaultBackColor;
+
+                }
+            }
+
+
+
+
+
+
+
+
+        }
+        private void pulsar_boton(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+
+            btn.BackColor = Color.Green;
+
+
+        }
+
+        private void Texto(object sender,EventArgs e)
+        {
+            
         }
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 9a40459d791d385cf9f6556bbf033fa1ee42f753
     }
 }

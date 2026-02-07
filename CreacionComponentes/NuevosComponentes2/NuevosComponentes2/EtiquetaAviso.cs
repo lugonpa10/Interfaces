@@ -18,7 +18,7 @@ namespace NuevosComponentes2
         Circulo,
         Imagen
     }
-    public partial class EtiquetaAviso : Control
+    public partial class EtiquetaAviso : Control//Refresh en imagen y onclickenmarca
     {
         public EtiquetaAviso()
         {
@@ -108,6 +108,9 @@ namespace NuevosComponentes2
             Point x = new Point(0);
             Point y = new Point(200);
 
+          
+
+
 
         }
         protected override void OnTextChanged(EventArgs e)
@@ -171,23 +174,29 @@ namespace NuevosComponentes2
             set
             {
                 imagenMarca = value;
+                Refresh();
             }
             get
             {
                 return imagenMarca;
             }
         }
-        [Category("Acción")]
+        [Category("Mis propiedades")]
         [Description("Se lanza cuando se hace click en la marca")]
         public event EventHandler ClickEnMarca;
         public Rectangle zonaEvento;
+
+        protected virtual void OnClickEnMarca()
+        {
+            ClickEnMarca?.Invoke(this, EventArgs.Empty);
+        }
 
         protected override void OnMouseClick(MouseEventArgs e)
         {
             base.OnMouseClick(e);
             if(marca != EMarca.Nada && zonaEvento.Contains(e.Location))
             {
-                ClickEnMarca?.Invoke(this, EventArgs.Empty);
+                OnClickEnMarca();
 
             }
 
