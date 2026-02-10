@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio 5", "Ejercicio 5\Ejercicio 5.csproj", "{6BE82F72-F74B-4B43-901C-5C349BB8CB78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateTextBox", "ValidateTextBox\ValidateTextBox.csproj", "{DB6176F8-BC44-4F24-9F11-62E3815EEFBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE82F72-F74B-4B43-901C-5C349BB8CB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE82F72-F74B-4B43-901C-5C349BB8CB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE82F72-F74B-4B43-901C-5C349BB8CB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE82F72-F74B-4B43-901C-5C349BB8CB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6176F8-BC44-4F24-9F11-62E3815EEFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6176F8-BC44-4F24-9F11-62E3815EEFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6176F8-BC44-4F24-9F11-62E3815EEFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6176F8-BC44-4F24-9F11-62E3815EEFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37A05C1C-7369-4EF0-A724-A4DEA4290F31}
+	EndGlobalSection
+EndGlobal
