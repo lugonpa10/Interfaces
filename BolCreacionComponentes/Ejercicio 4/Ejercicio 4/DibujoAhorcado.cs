@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Ejercicio_4
 {
-    public partial class DibujoAhorcado : UserControl
+    public partial class DibujoAhorcado : UserControl //tamaño
     {
         public DibujoAhorcado()
         {
             InitializeComponent();
+
         }
 
         private int errores;
@@ -73,41 +74,41 @@ namespace Ejercicio_4
             Pen lapiz = new Pen(Color.Black, 3);
             if (errores >= 1)
             {
-                g.DrawLine(lapiz, x * 0.1f, y * 0.9f, x * 0.5f, y * 0.9f);
-
+                g.DrawLine(lapiz, x * 0.05f, y * 0.95f, x * 0.6f, y * 0.95f);
             }
             if (errores >= 2)
             {
-                g.DrawLine(lapiz, x * 0.1f, y * 0.9f, x * 0.1f, y * 0.1f);
+                g.DrawLine(lapiz, x * 0.05f, y * 0.95f, x * 0.05f, y * 0.05f);
             }
             if (errores >= 3)
             {
-                g.DrawLine(lapiz, x * 0.1f, y * 0.1f, x * 0.3f, y * 0.1f);
+                g.DrawLine(lapiz, x * 0.05f, y * 0.05f, x * 0.45f, y * 0.05f);
             }
             if (errores >= 4)
             {
-                g.DrawLine(lapiz, x * 0.3f, y * 0.1f, x * 0.3f, y * 0.2f);
+                g.DrawLine(lapiz, x * 0.45f, y * 0.05f, x * 0.45f, y * 0.15f);
             }
             if (errores >= 5)
             {
-                float diametroCabeza = y * 0.15f;
-                g.DrawEllipse(lapiz, x * 0.3f - diametroCabeza / 2, y * 0.2f, diametroCabeza, diametroCabeza);
+                float diametroCabeza = y * 0.2f;
+                g.DrawEllipse(lapiz, x * 0.45f - diametroCabeza / 2, y * 0.15f, diametroCabeza, diametroCabeza);
             }
             if (errores >= 6)
             {
-                g.DrawLine(lapiz, x * 0.3f, y * 0.35f, x * 0.3f, y * 0.6f);
+                g.DrawLine(lapiz, x * 0.45f, y * 0.35f, x * 0.45f, y * 0.65f);
             }
             if (errores >= 7)
             {
-                g.DrawLine(lapiz, x * 0.3f, y * 0.6f, x * 0.1f, y * 0.7f);
-            }
-            if (errores >= 8)
-            {
-                g.DrawLine(lapiz, x * 0.3f, y * 0.6f, x * 0.5f, y * 0.7f);
+                g.DrawLine(lapiz, x * 0.45f, y * 0.65f, x * 0.2f, y * 0.8f);
+                if (errores >= 8)
+                {
+                    g.DrawLine(lapiz, x * 0.45f, y * 0.65f, x * 0.7f, y * 0.8f);
+                }
+
+
+                lapiz.Dispose();
             }
 
-            lapiz.Dispose();
         }
-
     }
 }
