@@ -34,6 +34,7 @@
             // txt
             // 
             this.txt.Location = new System.Drawing.Point(10, 10);
+            this.txt.Multiline = true;
             this.txt.Name = "txt";
             this.txt.Size = new System.Drawing.Size(100, 20);
             this.txt.TabIndex = 0;

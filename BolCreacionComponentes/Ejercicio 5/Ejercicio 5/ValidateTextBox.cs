@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Ejercicio_5
+namespace Ejercicio_5//Refresh en tipo
 {
     public partial class ValidateTextBox : UserControl
     {
@@ -27,7 +27,7 @@ namespace Ejercicio_5
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            txt.Location = new Point(10, 10);
+          
 
             this.Height = txt.Height + 20;
             txt.Width = this.Width - 20;
@@ -91,6 +91,7 @@ namespace Ejercicio_5
             set
             {
                 tipo = value;
+                ValidarTexto();
             }
             get
             {
@@ -116,6 +117,7 @@ namespace Ejercicio_5
                         }
                     }
                     break;
+
                 case eTipo.Textual:
                     foreach (Char c in txt.Text)
                     {
@@ -131,7 +133,7 @@ namespace Ejercicio_5
         }
 
         [Category("Mis eventos")]
-        [Description("Accede al TextChange del textBox desde el nuevo componente ")]
+        [Description("Accede al TextChange del textBox desde el nuevo componente")]
         public event EventHandler TextoCambiado;
         protected virtual void OnTextoCambiado(EventArgs e)
         {

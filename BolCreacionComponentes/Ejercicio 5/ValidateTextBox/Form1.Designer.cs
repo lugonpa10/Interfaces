@@ -33,12 +33,12 @@
             // 
             // validateTextBox1
             // 
-            this.validateTextBox1.Location = new System.Drawing.Point(21, 12);
-            this.validateTextBox1.Multilinea = false;
+            this.validateTextBox1.Location = new System.Drawing.Point(113, 64);
+            this.validateTextBox1.Multilinea = true;
             this.validateTextBox1.Name = "validateTextBox1";
-            this.validateTextBox1.Size = new System.Drawing.Size(199, 119);
+            this.validateTextBox1.Size = new System.Drawing.Size(646, 40);
             this.validateTextBox1.TabIndex = 0;
-            this.validateTextBox1.Texto = "";
+            this.validateTextBox1.Texto = "gfhgfjj";
             this.validateTextBox1.Tipo = Ejercicio_5.ValidateTextBox.eTipo.Textual;
             // 
             // Form1
